@@ -50,6 +50,9 @@ class Server(DH):
         self.writer = writer
         self.reader = reader
 
+        peername = self.writer.get_extra_info('peername')
+        logger.info(f'接受来自 {peername[0]}:{peername[1]} 的链接')
+
     def verify_timestamp(self, timestamp):
         if time.time() + 3 > timestamp and time.time() - 3 < timestamp:
             return True
@@ -295,5 +298,6 @@ async def new_server(reader, writer):
 
 
 async def start_server(host, port):
+    logger.info(f'服务器开启在 {host}:{port}')
     server = await asyncio.start_server(new_server, host, port)
     await server.serve_forever()
