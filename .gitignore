@@ -1,0 +1,6 @@
+venv/
+user.db
+__pycache__/
+*.json
+server_private_key
+.idea/
