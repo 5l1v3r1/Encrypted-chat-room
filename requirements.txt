@@ -1,0 +1,6 @@
+quamash
+asyncio
+rsa
+sqlalchemy
+PyQt5
+cryptography
