@@ -20,7 +20,7 @@ python -m pip install -r requirements.txt
 python server_main.py
 ```
 
-运行客户端
+运行客户端 (因为 quamash 对 Windows 兼容性不好, 所以只能在 Linux/MacOS 上运行)
 ```sh
 python client_main.py
 ```
